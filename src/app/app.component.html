@@ -1,0 +1,175 @@
+<!-- navbar goes here -->
+<div class=" container fixed  max-w-full"> 
+<nav class="  bg-slate-950  text-white  md:flex md:text-center lg:flex lg:text-center ">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between">
+
+      <div class="flex space-x-4">
+        <!-- logo -->
+        <div>
+          <a href="#" class="flex items-center py-5 px-2 text-white hover:text-gray-900">
+            <svg class="h-6 w-6 mr-1 text-blue-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+            </svg>
+            <span class="font-bold"><li class="nav-item list-none inline-block  px-5 text-xl">
+              <a class="nav-link active text_hover_animaiton " href="#">
+                <div style="position:relative;display:inline-block;" class="menu-text">
+                  <div style="position:relative;display:inline-block;">M</div>
+                  <div style="position:relative;display:inline-block;">Y</div>
+                  <div style="position:relative;display:inline-block;">R</div>
+                  <div style="position:relative;display:inline-block;">e</div>
+                  <div style="position:relative;display:inline-block;">s</div>
+                  <div style="position:relative;display:inline-block;">u</div>
+                  <div style="position:relative;display:inline-block;">m</div>
+                  <div style="position:relative;display:inline-block;">e</div>
+                </div>
+              </a>
+            </li></span>
+          </a>
+        </div>
+
+        <!-- primary nav -->
+        <div class="hidden md:flex items-center space-x-1">
+          <ul class="flex-1 text-end text-lg  ">
+            <li class="nav-item list-none inline-block  px-5">
+              <a class="nav-link active text_hover_animaiton " href="#">
+                <div style="position:relative;display:inline-block;" class="menu-text">
+                  <div style="position:relative;display:inline-block;">A</div>
+                  <div style="position:relative;display:inline-block;">b</div>
+                  <div style="position:relative;display:inline-block;">o</div>
+                  <div style="position:relative;display:inline-block;">u</div>
+                  <div style="position:relative;display:inline-block;">t</div>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item list-none inline-block  px-5">
+              <a class="nav-link active text_hover_animaiton " href="#">
+                <div style="position:relative;display:inline-block;" class="menu-text">
+                  <div style="position:relative;display:inline-block;">S</div>
+                  <div style="position:relative;display:inline-block;">K</div>
+                  <div style="position:relative;display:inline-block;">i</div>
+                  <div style="position:relative;display:inline-block;">l</div>
+                  <div style="position:relative;display:inline-block;">l</div>
+                  <div style="position:relative;display:inline-block;">s</div>
+      
+                </div>
+              </a>
+            </li>
+            <li class="nav-item list-none inline-block  px-5">
+              <a class="nav-link active text_hover_animaiton " href="#">
+                <div style="position:relative;display:inline-block;" class="menu-text">
+                  <div style="position:relative;display:inline-block;">P</div>
+                  <div style="position:relative;display:inline-block;">o</div>
+                  <div style="position:relative;display:inline-block;">r</div>
+                  <div style="position:relative;display:inline-block;">t</div>
+                  <div style="position:relative;display:inline-block;">f</div>
+                  <div style="position:relative;display:inline-block;">o</div>
+                  <div style="position:relative;display:inline-block;">l</div>
+                  <div style="position:relative;display:inline-block;">i</div>
+                  <div style="position:relative;display:inline-block;">o</div>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item list-none inline-block  px-5	">
+              <a class="nav-link active text_hover_animaiton " href="#">
+                <div style="position:relative;display:inline-block;" class="menu-text">
+                  <div style="position:relative;display:inline-block;">L</div>
+                  <div style="position:relative;display:inline-block;">e</div>
+                  <div style="position:relative;display:inline-block;">t</div>
+                  <div style="position:relative;display:inline-block;">s</div>
+                  <div style="position:relative;display:inline-block;">T</div>
+                  <div style="position:relative;display:inline-block;">a</div>
+                  <div style="position:relative;display:inline-block;">l</div>
+                  <div style="position:relative;display:inline-block;">k</div>
+      
+                </div>
+              </a>
+            </li>
+      
+      
+      
+          </ul>
+        </div>
+      </div>
+
+   
+      <!-- mobile button goes here -->
+      <div class="md:hidden flex items-center ">
+        <button (click)="toggleMobileMenu()" class="mobile-menu-button">
+          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- mobile menu -->
+  <div class="mobile-menu hidden md:hidden " [class.hidden]="isMobileMenuHidden ">
+    <ul class="flex-1 text-end text-lg ">
+      <li class="nav-item list-none   py-2 px-5">
+        <a class="nav-link active text_hover_animaiton " href="#">
+          <div style="position:relative;display:inline-block;" class="menu-text">
+            <div style="position:relative;display:inline-block;">A</div>
+            <div style="position:relative;display:inline-block;">b</div>
+            <div style="position:relative;display:inline-block;">o</div>
+            <div style="position:relative;display:inline-block;">u</div>
+            <div style="position:relative;display:inline-block;">t</div>
+          </div>
+        </a>
+      </li>
+      <li class="nav-item list-none   py-2 px-5">
+        <a class="nav-link active text_hover_animaiton " href="#">
+          <div style="position:relative;display:inline-block;" class="menu-text">
+            <div style="position:relative;display:inline-block;">S</div>
+            <div style="position:relative;display:inline-block;">K</div>
+            <div style="position:relative;display:inline-block;">i</div>
+            <div style="position:relative;display:inline-block;">l</div>
+            <div style="position:relative;display:inline-block;">l</div>
+            <div style="position:relative;display:inline-block;">s</div>
+
+          </div>
+        </a>
+      </li>
+      <li class="nav-item list-none  py-2  px-5">
+        <a class="nav-link active text_hover_animaiton " href="#">
+          <div style="position:relative;display:inline-block;" class="menu-text">
+            <div style="position:relative;display:inline-block;">P</div>
+            <div style="position:relative;display:inline-block;">o</div>
+            <div style="position:relative;display:inline-block;">r</div>
+            <div style="position:relative;display:inline-block;">t</div>
+            <div style="position:relative;display:inline-block;">f</div>
+            <div style="position:relative;display:inline-block;">o</div>
+            <div style="position:relative;display:inline-block;">l</div>
+            <div style="position:relative;display:inline-block;">i</div>
+            <div style="position:relative;display:inline-block;">o</div>
+          </div>
+        </a>
+      </li>
+      <li class="nav-item list-none py-2  px-5	">
+        <a class="nav-link active text_hover_animaiton " href="#">
+          <div style="position:relative;display:inline-block;" class="menu-text">
+            <div style="position:relative;display:inline-block;">L</div>
+            <div style="position:relative;display:inline-block;">e</div>
+            <div style="position:relative;display:inline-block;">t</div>
+            <div style="position:relative;display:inline-block;">s</div>
+            <div style="position:relative;display:inline-block;">T</div>
+            <div style="position:relative;display:inline-block;">a</div>
+            <div style="position:relative;display:inline-block;">l</div>
+            <div style="position:relative;display:inline-block;">k</div>
+
+          </div>
+        </a>
+      </li>
+
+
+
+    </ul>
+  </div>
+</nav>
+</div>
+
+<app-banner></app-banner>
+  <app-about></app-about>
+  <app-skills></app-skills>
